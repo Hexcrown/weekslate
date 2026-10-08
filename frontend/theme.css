@@ -1,0 +1,44 @@
+/* Shared look: the slate-and-chalk tokens used by the wall display and the settings page. */
+
+:root {
+  --bed: #262e36;
+  --tile: #303a44;
+  --tile-hi: #3a4651;
+  --edge: #46535f;
+  --chalk: #f1efe6;
+  --chalk-dim: #a7b2bb;
+  --on-c: #1d242a;
+  --ring: #f1efe6;
+
+  /* chalk colors, one per calendar */
+  --c0: #8ecfc0;
+  --c1: #f2a58e;
+  --c2: #9db8f0;
+  --c3: #f0d37a;
+  --c4: #c9a6e8;
+  --c5: #a9d98b;
+
+  /* events that belong to everyone (no person assigned) */
+  --everyone: #d8d4c4;
+
+  --hand: "Chalkboard SE", "Marker Felt", "Bradley Hand", ui-rounded, "SF Pro Rounded", sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+}
+
+[data-theme="light"] {
+  --bed: #e3e7ea;
+  --tile: #f6f7f7;
+  --tile-hi: #ffffff;
+  --edge: #cfd6dc;
+  --chalk: #1f2830;
+  --chalk-dim: #53616d;
+  --on-c: #ffffff;
+  --ring: #1f2830;
+  --c0: #2a8f7b;
+  --c1: #cf5f43;
+  --c2: #4a70d0;
+  --c3: #a97c08;
+  --c4: #8656bd;
+  --c5: #4f8f31;
+  --everyone: #a8a38c;
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Weekslate">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#262e36">
+<title>Weekslate</title>
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <div>
+      <div id="bigdate" class="bigdate"></div>
+      <div id="clock" class="clock"></div>
+    </div>
+    <nav class="controls" aria-label="Calendar controls">
+      <span id="range" class="range"></span>
+      <button id="prev" class="ctl" type="button" aria-label="Previous">&#8249;</button>
+      <button id="today" class="ctl wide" type="button">Today</button>
+      <button id="next" class="ctl" type="button" aria-label="Next">&#8250;</button>
+      <div class="seg" role="group" aria-label="View">
+        <button id="v-week" class="ctl wide" type="button" data-view="week" aria-pressed="true">Week</button>
+        <button id="v-month" class="ctl wide" type="button" data-view="month" aria-pressed="false">Month</button>
+      </div>
+      <a class="ctl icon" href="/settings.html" aria-label="Settings">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M3 5h14M3 10h14M3 15h14"/>
+          <circle cx="7" cy="5" r="2" fill="var(--tile)"/>
+          <circle cx="13" cy="10" r="2" fill="var(--tile)"/>
+          <circle cx="8" cy="15" r="2" fill="var(--tile)"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <div id="banner" class="banner" role="status" hidden></div>
+
+  <main class="body">
+    <section id="cal" class="cal" aria-label="Calendar"></section>
+    <aside class="side">
+      <section class="panel chores" aria-labelledby="choresTitle">
+        <div class="panel-head">
+          <h2 id="choresTitle">Today's chores</h2>
+          <span id="choreCount" class="count"></span>
+        </div>
+        <ul id="chores" class="chore-list"></ul>
+      </section>
+      <section id="scoresPanel" class="panel scores" aria-labelledby="scoresTitle">
+        <div class="panel-head">
+          <h2 id="scoresTitle">Points this week</h2>
+        </div>
+        <ul id="scores" class="score-list"></ul>
+      </section>
+    </aside>
+  </main>
+</div>
+
+<div id="modal" class="modal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="sheet-head">
+      <h2 id="modalTitle"></h2>
+      <button id="modalClose" class="ctl" type="button" aria-label="Close">&#10005;</button>
+    </div>
+    <div id="modalBody" class="sheet-body"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

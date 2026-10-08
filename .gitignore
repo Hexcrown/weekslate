@@ -1,0 +1,15 @@
+# secrets and local data: never commit these
+.env
+data/
+*.sqlite
+*.sqlite-journal
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# misc
+.DS_Store

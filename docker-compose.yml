@@ -1,0 +1,12 @@
+services:
+  weekslate:
+    build: .
+    container_name: weekslate
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      TZ: America/New_York
+      CALENDAR_URLS: ${CALENDAR_URLS:-}     # set in .env (see .env.example)
+    volumes:
+      - ./data:/data        # SQLite lives here; back this folder up
